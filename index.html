@@ -10,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/index.css">
     <title>My Learning Journal</title>
 </head>
@@ -23,8 +26,19 @@
                 <span class="strong">My learning journal</span>
             </div>
             <div class="header-right">
-                <a href="./index.html" class="strong">Home</a>
-                <a href="./about_me.html" class="strong">About me</a>
+                <i class="fa fa-bars" id="bars-btn"></i>
+                <a href="./index.html" class="bar-option less-strong">Home</a>
+                <a href="./about_me.html" class="bar-option less-strong">About me</a>
+            </div>
+            <div class="hidden" id="bars-options">
+                <div class="options">
+                    <div>
+                        <a class="bar-option less-strong" href="./index.html">Home</a>
+                    </div>
+                    <div>
+                        <a class="bar-option less-strong" href="./about_me.html">About me</a>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- Carousel -->
@@ -33,96 +47,24 @@
             <a href="./first_blog.html">
                 <h1 class="title">My new journey as a bootcamp student.</h1>
             </a>
-            <p class="dsc">After several months of learning in the Frontend Developer Career Path, I've made the big
+            <p class="descriptive">After several months of learning in the Frontend Developer Career Path, I've made the big
                 jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded
                 peers.</p>
         </section>
         <!-- Main -->
-        <main class="main-blog">
-            <section class="blog mag-side">
-                <img src="./images/blog_1.png" alt="">
-                <p class="date">JULY 23, 2022</p>
-                <a href="./first_blog.html">
-                    <h1 class="title">Blog one</h1>
-                </a>
-                <p class="dsc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several
-                    months of learning in the Frontend Developer Career Path.</p>
-            </section>
-            <section class="blog mag-side">
-                <img src="./images/blog_2.png" alt="">
-                <p class="date">JULY 23, 2022</p>
-                <a href="./first_blog.html">
-                    <h1 class="title">Blog two</h1>
-                </a>
-                <p class="dsc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several
-                    months of learning in the Frontend Developer Career Path.</p>
-            </section>
-            <section class="blog mag-side">
-                <img src="./images/blog_3.png" alt="">
-                <p class="date">JULY 23, 2022</p>
-                <a href="./first_blog.html">
-                    <h1 class="title">Blog three</h1>
-                </a>
-                <p class="dsc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several
-                    months of learning in the Frontend Developer Career Path.</p>
-            </section>
-            <section class="blog mag-side hide">
-                <img src="./images/blog_4.png" alt="">
-                <p class="date">JULY 23, 2022</p>
-                <a href="./first_blog.html">
-                    <h1 class="title">Blog four</h1>
-                </a>
-                <p class="dsc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After
-                    several months of learning in the Frontend Developer Career Path.</p>
-            </section>
-            <section class="blog mag-side hide">
-                <img src="./images/blog_5.png" alt="">
-                <p class="date">JULY 23, 2022</p>
-                <a href="./first_blog.html">
-                    <h1 class="title">Blog five</h1>
-                </a>
-                <p class="dsc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After
-                    several months of learning in the Frontend Developer Career Path.</p>
-            </section>
-            <section class="blog mag-side hide">
-                <img src="./images/blog_6.png" alt="">
-                <p class="date">JULY 23, 2022</p>
-                <a href="./first_blog.html">
-                    <h1 class="title">Blog six</h1>
-                </a>
-                <p class="dsc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After
-                    several months of learning in the Frontend Developer Career Path.</p>
-            </section>
-        </main>
+        <main id="main-blog"></main>
         <!-- View more -->
         <div class="view-more">
-            <a id="view-more-link" href="#" class="strong">View More</a>
+            <p id="view-more-link" href="#" class="strong">View More</p>
         </div>
         <!-- Footer -->
         <footer class="strong">
-            <p>My Learning Journal</p>
-            <p>Copyright ©2022</p>
+            <p class="strong">My Learning Journal</p>
+            <p>Copyright ©2023</p>
         </footer>
     </div>
-    <script>
-        const viewMoreLink = document.getElementById('view-more-link');
-        const hideSections = document.querySelectorAll('.hide');
 
-        let isHidden = true;
-
-        viewMoreLink.addEventListener('click', function (event) {
-            event.preventDefault();
-
-            hideSections.forEach(function (section) {
-                section.style.display = isHidden ? 'block' : 'none';
-            });
-
-            viewMoreLink.textContent = isHidden ? 'View Less' : 'View More';
-            isHidden = !isHidden;
-        });
-    </script>
-
-
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
