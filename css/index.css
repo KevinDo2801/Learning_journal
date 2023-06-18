@@ -266,7 +266,7 @@ footer p {
         max-width: 1085px;
     }
 
-    #bars-btn {
+    #bars-btn, #bars-options {
         display: none;
     }
 
